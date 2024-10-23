@@ -1,1 +1,40 @@
 @import 'bootstrap';
+
+.navbar {
+  background-color: #000 !important;
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#home-jumbotron {
+  background-image: asset-url('typewritter.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 425px;
+}
+
+html,
+body{
+  height: 100%;
+}
+
+#page-content{
+  flex: 1 0 auto;
+  background-color: #d3d3d3;
+}
+
+#sticky-footer{
+  flex-shrink: none;
+}
