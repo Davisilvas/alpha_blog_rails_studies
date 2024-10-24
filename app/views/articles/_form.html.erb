@@ -1,16 +1,6 @@
 <div class="container">
-  <% if @article.errors.any? %>
-  <h2>The following errors prevented the article from being saved.</h2>
-  <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-      <li>
-        <%= msg %>
-      </li>
-      <% end %>
-  </ul>
-  <% end %>
+  <%= render 'shared/errors' %>
 
-  
   <div class="row justify-content-center">
     <div class="col-10">
       <%= form_with(model: @article, class:"shadow p-3 mb-5 bg-info rounded", data: {turbo: false}, local: true) do |f| %>
@@ -34,6 +24,6 @@
         </div>
       <% end %>
     </div>
-    <%= link_to '[ Cancel and return to articles listing ]', articles_path, class: "justify-content-center text-danger fw-bold"%>
+    <%= link_to '[ Cancel and return to articles listing ]', articles_path, class: "justify-content-center text-danger fw-bold mb-3"%>
   </div>
 </div>
