@@ -31,12 +31,9 @@
               Profile [<%= current_user.username %>]
             </a>
             <ul class="dropdown-menu">
-              <li>
-                <%= link_to 'View your profile', user_path(current_user), class:'dropdown-item' %>
-              </li>
-              <li>
-                <%= link_to 'Edit your profile', edit_user_path(current_user), class:'dropdown-item' %>
-              </li>
+              <%= link_to 'View your profile', user_path(current_user), class:'dropdown-item' %>
+              <%= link_to 'Edit your profile', edit_user_path(current_user), class:'dropdown-item' %>
+              <%= link_to 'Delete your profile', user_path(current_user), class:'dropdown-item text-danger', data: {turbo_method: :delete, "turbo-confirm": "Are you sure you want to delete your profile?" }%>
             </ul>
           </li>
           <li class="nav-item">
